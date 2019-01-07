@@ -71,7 +71,7 @@ namespace OODesignExamples.Decorator
 
     public class GUIDriver
     {
-        public static void main(String[] args)
+        public void Run()
         {
             // create a new window 
             iWindow window = new SimpleWindow();

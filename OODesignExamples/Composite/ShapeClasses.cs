@@ -43,7 +43,7 @@ namespace OODesignExamples.Composite
         //This method must be implemented in this simple shape
         public void RenderShapeToScreen()
         {
-            Console.WriteLine("Draw Shape");
+            Console.WriteLine("Draw Line");
             // logic to render this shape to screen
         }
 
@@ -74,8 +74,9 @@ namespace OODesignExamples.Composite
         //in complex shapes this method is implemented using delegation
         public void RenderShapeToScreen()
         {
+            Console.WriteLine("Draw Rectangle");
             foreach (iShape s in rectangleEdges)
-            {
+            {                
                 // delegate to child objects
                 s.RenderShapeToScreen();
             }
@@ -102,6 +103,7 @@ namespace OODesignExamples.Composite
         //in complex shapes this method is handled with delegation
         public void RenderShapeToScreen()
         {
+            Console.WriteLine("Draw ComplexShape");
             foreach (iShape s in shapeList)
             {
                 // use delegation to handle this method
@@ -114,7 +116,7 @@ namespace OODesignExamples.Composite
     public class GraphicsEditor
     {
 
-        public static void main(String[] args)
+        public void Run()
         {
             List<iShape> allShapesInSoftware = new List<iShape>();
 
