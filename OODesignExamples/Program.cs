@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OODesignExamples.Command;
 
 namespace OODesignExamples
 {
@@ -10,6 +11,10 @@ namespace OODesignExamples
     {
         static void Main(string[] args)
         {
+            StockTradeClient stc = new StockTradeClient();
+            stc.Run();
+
+            Console.ReadLine();
         }
     }
 }
