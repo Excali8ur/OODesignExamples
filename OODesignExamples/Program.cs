@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using OODesignExamples.Command;
 using OODesignExamples.Composite;
 using OODesignExamples.Decorator;
+using OODesignExamples.Mediator;
+using OODesignExamples.FactoryMethod;
+using OODesignExamples.Observer;
 
 namespace OODesignExamples
 {
@@ -24,6 +27,18 @@ namespace OODesignExamples
             Console.WriteLine("\n--- Decorator Pattern ---");
             GUIDriver gd = new GUIDriver();
             gd.Run();
+
+            Console.WriteLine("\n--- Factory Pattern ---");
+            DocClient dc = new DocClient();
+            dc.Run();
+
+            Console.WriteLine("\n--- Mediator Pattern ---");
+            ChatClient cc = new ChatClient();
+            cc.Run();
+
+            Console.WriteLine("\n--- Observer Pattern ---");
+            NewsClient nc = new NewsClient();
+            nc.Run();
 
             Console.ReadLine();
         }

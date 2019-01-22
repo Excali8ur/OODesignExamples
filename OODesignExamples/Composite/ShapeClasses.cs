@@ -9,7 +9,6 @@ namespace OODesignExamples.Composite
     //Shape is the Component interface
     public interface iShape
     {
-
         //Draw shape on screen 
         //Method that must be implemented by Basic as well as complex shapes 
         void RenderShapeToScreen();
@@ -23,8 +22,6 @@ namespace OODesignExamples.Composite
     //Line is a basic shape that does not support adding shapes
     public class Line : iShape
     {
-
-
         //Create a line between point1 and point2
         public Line(int point1X, int point1Y, int point2X, int point2Y)
         {
@@ -46,7 +43,6 @@ namespace OODesignExamples.Composite
             Console.WriteLine("Draw Line");
             // logic to render this shape to screen
         }
-
     }
 
     //Rectangle is a composite 
@@ -80,6 +76,35 @@ namespace OODesignExamples.Composite
                 // delegate to child objects
                 s.RenderShapeToScreen();
             }
+        }
+    }
+
+    public class House : iShape
+    {
+        // List of shapes forming the rectangle
+        // rectangle is centered around origin
+        List<iShape> edges;
+        public House()
+        {
+            edges = new List<iShape>();
+            edges.Add(new Rectangle());
+            edges.Add(new Line(-1, 2, 2, 1));
+            edges.Add(new Line(1, 2, 2, -1));
+        }
+        public List<iShape> ExplodeShape()
+        {
+            // making a simple shape explode would return only the shape itself, there are no parts of this shape
+            List<iShape> shapeParts = new List<iShape>();
+            shapeParts.Add(this);
+            return shapeParts;
+
+        }
+
+        //This method must be implemented in this simple shape
+        public void RenderShapeToScreen()
+        {
+            Console.WriteLine("Draw Line");
+            // logic to render this shape to screen
         }
     }
 

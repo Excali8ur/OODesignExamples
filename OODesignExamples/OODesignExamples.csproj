@@ -46,16 +46,16 @@
     <Compile Include="Command\StocktradeClasses.cs" />
     <Compile Include="Composite\ShapeClasses.cs" />
     <Compile Include="Decorator\WindowClasses.cs" />
+    <Compile Include="FactoryMethod\DocumentClasses.cs" />
+    <Compile Include="FactoryMethod\FactoryClasses.cs" />
+    <Compile Include="Mediator\ChatAppClasses.cs" />
+    <Compile Include="Observer\NewsPublisherClasses.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="FactoryMethod\" />
-    <Folder Include="Mediator\" />
-    <Folder Include="Observer\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

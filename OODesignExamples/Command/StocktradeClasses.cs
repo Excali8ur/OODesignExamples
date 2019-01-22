@@ -29,10 +29,6 @@ namespace OODesignExamples.Command
     {
         private List<iOrder> ordersQueue = new List<iOrder>();
 
-        public Agent()
-        {
-        }
-
         public void PlaceOrder(iOrder order)
         {
             ordersQueue.Add(order);
