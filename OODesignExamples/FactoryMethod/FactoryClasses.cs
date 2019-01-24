@@ -17,7 +17,7 @@ namespace OODesignExamples.FactoryMethod
     /// declares the method FactoryMethod, which returns a Product object. 
     /// May call the generating method for creating Product objects.
     /// </summary>
-    public abstract class Creator
+    public abstract class Factory
     {
         public void anOperation()
         {
@@ -37,7 +37,7 @@ namespace OODesignExamples.FactoryMethod
     /// <summary>
     /// ConcreteCreator overrides the generating method for creating ConcreteProduct objects
     /// </summary>
-    public class ConcreteCreator : Creator
+    public class ConcreteCreator : Factory
     {
 
         protected override iProduct FactoryMethod()
@@ -53,7 +53,7 @@ namespace OODesignExamples.FactoryMethod
     {
         public void Run()
         {
-            Creator creator = new ConcreteCreator();
+            Factory creator = new ConcreteCreator();
             creator.anOperation();
         }
     }

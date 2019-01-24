@@ -43,13 +43,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command\StocktradeClasses.cs" />
-    <Compile Include="Composite\ShapeClasses.cs" />
-    <Compile Include="Decorator\WindowClasses.cs" />
-    <Compile Include="FactoryMethod\DocumentClasses.cs" />
-    <Compile Include="FactoryMethod\FactoryClasses.cs" />
-    <Compile Include="Mediator\ChatAppClasses.cs" />
-    <Compile Include="Observer\NewsPublisherClasses.cs" />
+    <Compile Include="Command\Command.cs" />
+    <Compile Include="Command\Invoker.cs" />
+    <Compile Include="Command\Receiver.cs" />
+    <Compile Include="Command\Client.cs" />
+    <Compile Include="Composite\Component.cs" />
+    <Compile Include="Composite\Composite.cs" />
+    <Compile Include="Composite\Leafs.cs" />
+    <Compile Include="Composite\Client.cs" />
+    <Compile Include="Decorator\Component.cs" />
+    <Compile Include="Decorator\Decorator.cs" />
+    <Compile Include="Decorator\Client.cs" />
+    <Compile Include="FactoryMethod\Client.cs" />
+    <Compile Include="FactoryMethod\Factory.cs" />
+    <Compile Include="FactoryMethod\Product.cs" />
+    <Compile Include="Mediator\Client.cs" />
+    <Compile Include="Mediator\Colleague.cs" />
+    <Compile Include="Mediator\Mediator.cs" />
+    <Compile Include="Observer\Client.cs" />
+    <Compile Include="Observer\Observer.cs" />
+    <Compile Include="Observer\Observable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
